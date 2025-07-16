@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+@media (max-width: 768px) {
+  h1, h2 {
+    font-size: 1rem;
+  }
+
+  nav a {
+    display: block;
+    margin: 0.5rem 0;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  width: 100vw;
+  background-color: #090909;
+  scroll-behavior: smooth;
+  color: white;
+}

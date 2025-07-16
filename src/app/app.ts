@@ -3,10 +3,50 @@ import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  protected title = 'SiteMama';
+//   protected title = 'Accente Culturale';
+//   email = "accenteculturalecristian@gmail.com"
+//   phone = "0721246424"
+//   address = "Strada Ghimbavului 40A, Cristian, Brașov"
+//   highlightedSection: string | null = null;
+
+// highlightSection(id: string) {
+//   // Scroll smoothly to the section
+//   const el = document.getElementById(id);
+//   if (el) {
+//     el.scrollIntoView({ behavior: 'smooth' });
+//   }
+
+//   // Highlight the section title (the <h1> inside the section)
+//   this.highlightedSection = id;
+
+//   // Remove highlight after 1 second
+//   setTimeout(() => {
+//     this.highlightedSection = null;
+//   }, 1000);
+// }
+  contactInfo = {
+    phone: '+40 123 456 789', // Replace with actual phone
+    email: 'contact@accenteculturale.ro', // Replace with actual email
+    address: 'Cristian, Brașov, România' // Replace with actual address
+  };
+
+  // Navigation scroll method
+  scrollToSection(sectionId: string): void {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  // Download form method
+  downloadForm(formType: string): void {
+    // Implement download logic here
+    console.log(`Downloading form: ${formType}`);
+  }
+
 }
