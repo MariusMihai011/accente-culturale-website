@@ -30,9 +30,9 @@ export class App {
 //   }, 1000);
 // }
   contactInfo = {
-    phone: '+40 123 456 789', // Replace with actual phone
-    email: 'contact@accenteculturale.ro', // Replace with actual email
-    address: 'Cristian, Brașov, România' // Replace with actual address
+    phone: '+40 721 246 424', // Replace with actual phone
+    email: 'accenteculturalecristian@gmail.com', // Replace with actual email
+    address: 'Strada Ghimbavului 40A, Cristian, jud. Brașov, 507055' // Replace with actual address
   };
 
   // Navigation scroll method

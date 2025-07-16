@@ -554,7 +554,7 @@ body {
 .content-card {
   background: rgba(255, 248, 220, 0.95);
   padding: 2.5rem;
-  border-radius: 15px;
+  border-radius: 5rem;
   box-shadow: 0 8px 32px var(--shadow-medium);
   border: 2px solid var(--romanian-gold);
   backdrop-filter: blur(10px);
