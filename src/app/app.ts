@@ -43,10 +43,6 @@ export class App {
     }
   }
 
-  // Download form method
-  downloadForm(formType: string): void {
-    // Implement download logic here
-    console.log(`Downloading form: ${formType}`);
-  }
+  // Download form metho
 
 }
