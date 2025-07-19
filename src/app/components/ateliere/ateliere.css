@@ -1,0 +1,66 @@
+/* Workshops Grid */
+.workshops-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.workshop-card {
+  background: rgba(255, 248, 220, 0.95);
+  padding: 2rem;
+  border-radius: 15px;
+  border: 2px solid var(--romanian-gold);
+  box-shadow: 0 8px 32px var(--shadow-medium);
+  text-align: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.workshop-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 215, 0, 0.2),
+      transparent);
+  transition: left 0.5s ease;
+}
+
+.workshop-card:hover::before {
+  left: 100%;
+}
+
+.workshop-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px var(--shadow-medium);
+  border-color: var(--romanian-red);
+}
+
+.workshop-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.workshop-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.5rem;
+  color: var(--romanian-red);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.workshop-description {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-dark);
+  text-align: justify;
+  margin-bottom: 0;
+}
