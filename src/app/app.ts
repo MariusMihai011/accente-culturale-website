@@ -1,17 +1,13 @@
-import { Component, inject, OnInit, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { WorkshopService } from './services/workshop';
-import { WorkshopModel } from './models/workshop';
-import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule],
+  imports: [RouterOutlet, RouterLink],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App implements OnInit{
-  workshopService = inject(WorkshopService)
+export class App {
 
   contactInfo = {
     phone: '+40 721 246 424',
