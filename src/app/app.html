@@ -202,78 +202,16 @@
       <div class="section-content">
         <div class="workshops-grid">
 
-          <div class="workshop-card">
-            <div class="workshop-icon">🎨</div>
-            <h3 class="workshop-title">Atelier de pictură</h3>
-            <h4 class="footer-motto"><b>"Învățăm să vedem prin artă"</b></h4>
-            <p class="workshop-description">
-              În cadrul atelierului, sunt reinterpretate cu spontaneitatea și sinceritatea copilăriei
-              elemente din patrimoniul cultural: case vechi, ii, motive decorative, sărbători și obiceiuri, personaje de
-              poveste.</p>
-              <h3>Vârsta recomandată: 7-25 ani.</h3>
-          </div>
-
-          <div class="workshop-card">
-            <div class="workshop-icon">💃</div>
-            <h3 class="workshop-title">Curs de dansuri populare</h3>
-            <h4 class="footer-motto"><b>"Tradiția se învață în pași de joc"</b></h4>
-            <p class="workshop-description">
-              Prin exerciții structurate și repetiții, copiii și tinerii însușesc tehnici coregrafice autentice
-              și spiritul comunitar al jocului popular.</p>
-              <h3>Vârsta recomandată: 6-25 ani.</h3>
-            
-          </div>
-
-          <div class="workshop-card">
-            <div class="workshop-icon">🎵</div>
-            <h3 class="workshop-title">Curs de interpretare vocală</h3>
-            <h4 class="footer-motto"><b>"Lasă cântecul popular să îți fie glas și suflet!"</b></h4>
-            <p class="workshop-description">
-              Oferim copiilor ocazia să descopere autenticitatea cântecelor.
-              Învățăm tehnici de respirație, intonație și frazare, lucrăm pe repertoriu universal și
-              încurajăm exprimarea liberă pe scenă prin voce și dezvoltarea urechii muzicale.</p>
-              <h3>Vârsta recomandată: 7-20 ani.</h3>
-          </div>
-
-          <div class="workshop-card">
-            <div class="workshop-icon">🧵</div>
-            <h3 class="workshop-title">Șezătoarea Măiestriei</h3>
-            <h4 class="footer-motto"><b>"Locul unde tradiția prinde glas"</b></h4>
-            <p class="workshop-description">
-              Atelierele meșteșugărești din cadrul șezătorii oferă participanților oportunitatea să învețe tehnici
-              tradiționale
-              inspirate din lumea satului românesc: cusut, brodat, croșetat, împletit, pictură pe lemn și sticlă,
-              olărit, torsul lânii etc.</p>
-              <h3>Vârsta recomandată: 7-90 ani.</h3>
-            
-          </div>
-
-          <div class="workshop-card">
-            <div class="workshop-icon">📚</div>
-            <h3 class="workshop-title">Cufărul cu povești</h3>
-            <h4 class="footer-motto"><b>"Poveștile ne învață să fim oameni"</b></h4>
-            <p class="workshop-description">
-              Acest atelier este un spațiu magic unde copiii descoperă basme și legende din patrimoniul
-              cultural și universal prin lectură, joc de rol și activități creative. Poveștile prind viață,
-              dezvoltând imaginația, vocabularul și încrederea în exprimarea orală a copiilor 
-              prin intermediul poveștilor ascultate sau interpretate. Copiii sunt încurajați să exploreze 
-              emoții, situații și personaje.</p>
-              <h3>Vârsta recomandată: 4-8 ani.</h3> 
-            
-          </div>
-
-          <div class="workshop-card">
-            <div class="workshop-icon">📚</div>
-            <h3 class="workshop-title">Storytelling & Scriere creativă</h3>
-            <h4 class="footer-motto"><b>"Scrie o poveste, deschide o lume"</b></h4>
-            <p class="workshop-description">
-              În acest atelier, copiii vor învăța să transforme ideile, amintirile și observațiile legate de patrimoniul 
-              local în povești autentice, scrise sau orale. Prin jocuri de imaginație, exerciții de scriere 
-              și activități de grup, copiii vor explora structura poveștii, construirea personajelor, 
-              ritmul narativ și expresivitatea limbajului.</p>
-              <h3>Vârsta recomandată: 9-14 ani.</h3>
-            
-          </div>
+          @for (item of workshopList(); track $index) {
+            <div class="workshop-card">
+              <div class="workshop-icon">🎨</div>
+              <h3 class="workshop-title"> {{item.title}} </h3>
+              <h4 class="footer-motto"><b> {{item.moto}}</b></h4>
+              <p class="workshop-description">
+                {{item.description}} </p>
+                <h3>Vârsta recomandată: {{item.age_range}} </h3>
+            </div>
+          }
 
         </div>
         <div class="motto-card">

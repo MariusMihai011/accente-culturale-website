@@ -1,48 +1,49 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { WorkshopService } from './services/workshop';
+import { WorkshopModel } from './models/workshop';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App {
-//   protected title = 'Accente Culturale';
-//   email = "accenteculturalecristian@gmail.com"
-//   phone = "0721246424"
-//   address = "Strada Ghimbavului 40A, Cristian, Brașov"
-//   highlightedSection: string | null = null;
+export class App implements OnInit{
+  workshopService = inject(WorkshopService)
 
-// highlightSection(id: string) {
-//   // Scroll smoothly to the section
-//   const el = document.getElementById(id);
-//   if (el) {
-//     el.scrollIntoView({ behavior: 'smooth' });
-//   }
-
-//   // Highlight the section title (the <h1> inside the section)
-//   this.highlightedSection = id;
-
-//   // Remove highlight after 1 second
-//   setTimeout(() => {
-//     this.highlightedSection = null;
-//   }, 1000);
-// }
   contactInfo = {
-    phone: '+40 721 246 424', // Replace with actual phone
-    email: 'accenteculturalecristian@gmail.com', // Replace with actual email
-    address: 'Strada Ghimbavului 40A, Cristian, jud. Brașov, 507055' // Replace with actual address
+    phone: '+40 721 246 424',
+    email: 'accenteculturalecristian@gmail.com',
+    address: 'Strada Ghimbavului 40A, Cristian, jud. Brașov, 507055'
   };
 
-  // Navigation scroll method
+  constructor() {
+
+  }
+
+  ngOnInit(): void {
+    this.getWorkshops()
+  }
+
+  workshopList = signal<WorkshopModel[]>([]);
+  getWorkshops() {
+    this.workshopService.getWorkshops().subscribe({
+      next: (response: WorkshopModel[]) => {
+        console.log('Workshops loaded:', response);
+          this.workshopList.set(response);
+      },
+      error: () => {
+        console.error('Error loading workshops:', Error); // Add this
+      }
+    })
+  }
+
   scrollToSection(sectionId: string): void {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   }
-
-  // Download form metho
-
 }
