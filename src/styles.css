@@ -1,33 +1,4 @@
-@media (max-width: 768px) {
 
-  h1,
-  h2 {
-    font-size: 1rem;
-  }
-
-  nav a {
-    display: block;
-    margin: 0.5rem 0;
-  }
-
-  button {
-    font-size: 1rem;
-  }
-}
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  box-sizing: border-box;
-  width: 100vw;
-  background-color: #090909;
-  scroll-behavior: smooth;
-  color: white;
-}
-
-/* Import Romanian-inspired fonts */
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Dancing+Script:wght@400;500;600;700&family=Crimson+Text:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
 /* Global Reset and Base Styles */
@@ -53,7 +24,7 @@ body {
       rgba(255, 215, 0, 0.05) 50%,
       rgba(160, 82, 45, 0.1) 75%,
       rgba(139, 0, 0, 0.15) 100%),
-    url('https://i.pinimg.com/736x/c3/ae/00/c3ae001b3b2f1c373ef6fa6aa87fc3cc.jpg');
+    url('assets/background/bg2.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

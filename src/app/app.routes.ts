@@ -10,6 +10,11 @@ import { Inscrieri } from './components/inscrieri/inscrieri';
 
 export const routes: Routes = [
     {
+        path: "",
+        redirectTo: "/acasa",
+        pathMatch: "full"
+    },
+    {
         path:"acasa",
         component:Acasa
     },

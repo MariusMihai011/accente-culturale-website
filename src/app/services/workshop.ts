@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class WorkshopService {
-  private apiUrl = 'http://localhost:8000/api/workshops';
+  private apiUrl = 'https://accente-culturale-api.onrender.com/api/v1/workshops';
 
   http = inject(HttpClient);
 

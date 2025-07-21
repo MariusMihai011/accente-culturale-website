@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
+import { WorkshopModel } from './models/workshop';
 
 @Component({
   selector: 'app-root',
@@ -19,22 +20,22 @@ export class App {
 
   }
 
-  ngOnInit(): void {
-    this.getWorkshops()
-  }
+  // ngOnInit(): void {
+  //   this.getWorkshops()
+  // }
 
-  workshopList = signal<WorkshopModel[]>([]);
-  getWorkshops() {
-    this.workshopService.getWorkshops().subscribe({
-      next: (response: WorkshopModel[]) => {
-        console.log('Workshops loaded:', response);
-          this.workshopList.set(response);
-      },
-      error: () => {
-        console.error('Error loading workshops:', Error); // Add this
-      }
-    })
-  }
+  // workshopList = signal<WorkshopModel[]>([]);
+  // getWorkshops() {
+  //   this.workshopService.getWorkshops().subscribe({
+  //     next: (response: WorkshopModel[]) => {
+  //       console.log('Workshops loaded:', response);
+  //         this.workshopList.set(response);
+  //     },
+  //     error: () => {
+  //       console.error('Error loading workshops:', Error); // Add this
+  //     }
+  //   })
+  // }
 
   scrollToSection(sectionId: string): void {
     const element = document.getElementById(sectionId);
